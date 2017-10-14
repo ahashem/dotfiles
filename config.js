@@ -64,10 +64,11 @@ module.exports = {
     'torbrowser',
     'transmission',
     'vlc',
-    'xquartz'
+    'xquartz',
+    'yarn'
   ],
   gem: [
-    'git-up'
+    // 'git-up'
   ],
   npm: [
     'antic',
@@ -81,7 +82,9 @@ module.exports = {
     'trash',
     'vtop',
     'yarn',
-    '@angular/cli'
+    '@angular/cli',
+    'firebase-cli',
+
     // ,'yo'
   ]
 };
