@@ -70,7 +70,8 @@ module.exports = {
     //'transmission',
     'visual-studio-code',
     'vlc',
-    'xquartz'
+    'xquartz',
+    'yarn'
   ],
   gem: [
   ],
@@ -86,7 +87,9 @@ module.exports = {
     'trash',
     'vtop',
     'yarn',
-    '@angular/cli'
+    '@angular/cli',
+    'firebase-cli',
+
     // ,'yo'
   ]
 };
