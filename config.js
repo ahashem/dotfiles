@@ -48,11 +48,11 @@ module.exports = {
     //'amazon-cloud-drive',
     //'atom',
     // 'box-sync',
-    //'comicbooklover',
+    'comicbooklover',
     //'diffmerge',
     'docker', // docker for mac
     //'dropbox',
-    //'evernote',
+    'evernote',
     'flux',
     'gpg-suite',
     //'ireadfast',
@@ -69,7 +69,7 @@ module.exports = {
     //'torbrowser',
     //'transmission',
     'visual-studio-code',
-    //'vlc',
+    'vlc',
     'xquartz'
   ],
   gem: [
@@ -84,7 +84,9 @@ module.exports = {
     'npm-check-updates',
     'prettyjson',
     'trash',
-    'vtop'
+    'vtop',
+    'yarn',
+    '@angular/cli'
     // ,'yo'
   ]
 };
