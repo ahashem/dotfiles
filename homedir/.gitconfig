@@ -71,6 +71,7 @@
   who = shortlog -s --
   ph = push
   pl = pull
+  up = pull --rebase --autostash
   lp = log -p
   lod = log --oneline --decorate
   lg = log --graph
