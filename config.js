@@ -47,10 +47,10 @@ module.exports = {
     //'amazon-cloud-drive',
     //'atom',
     // 'box-sync',
-    //'comicbooklover',
+    'comicbooklover',
     //'diffmerge',
-    //'dropbox',
-    //'evernote',
+    'dropbox',
+    'evernote',
     'gpgtools',
     //'ireadfast',
     'iterm2',
@@ -61,9 +61,9 @@ module.exports = {
     //'sketchup',
     'slack',
     'the-unarchiver',
-    //'torbrowser',
-    //'transmission',
-    //'vlc',
+    'torbrowser',
+    'transmission',
+    'vlc',
     'xquartz'
   ],
   gem: [
@@ -79,7 +79,9 @@ module.exports = {
     'npm-check',
     'prettyjson',
     'trash',
-    'vtop'
+    'vtop',
+    'yarn',
+    '@angular/cli'
     // ,'yo'
   ]
 };
