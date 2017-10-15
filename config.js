@@ -67,9 +67,9 @@ module.exports = {
     'xquartz',
     'yarn'
   ],
-  // gem: [
+  gem: [
     // 'git-up'
-  // ],
+  ],
   npm: [
     'antic',
     'buzzphrase',
