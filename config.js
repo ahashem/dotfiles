@@ -65,13 +65,15 @@ module.exports = {
     'sizeup',
     //'sketchup',
     'slack',
+    'spectacle',
+    'sequel-pro',
     'the-unarchiver',
     //'torbrowser',
     //'transmission',
     'visual-studio-code',
     'vlc',
     'xquartz',
-    'yarn'
+    'java'
   ],
   gem: [
   ],
@@ -89,7 +91,6 @@ module.exports = {
     'yarn',
     '@angular/cli',
     'firebase-cli',
-
     // ,'yo'
   ]
 };
