@@ -55,4 +55,6 @@ unsetopt correct
 fortune
 
 export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+#export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+
+source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
