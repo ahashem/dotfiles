@@ -29,7 +29,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize compleat dirpersist autojump git gulp history cp)
+plugins=(colorize compleat dirpersist autojump git gulp history cp brew)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,3 +53,6 @@ unsetopt correct
 
 # run fortune on new terminal :)
 fortune
+
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
