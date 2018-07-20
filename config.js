@@ -41,7 +41,8 @@ module.exports = {
     'vim --with-override-system-vi',
     'watch',
     // Install wget with IRI support
-    'wget --enable-iri'
+    'wget --enable-iri',
+    'gitup',
   ],
   cask: [
     //'adium',
@@ -66,14 +67,14 @@ module.exports = {
     //'sketchup',
     'slack',
     'spectacle',
-    'sequel-pro',
     'the-unarchiver',
     //'torbrowser',
     //'transmission',
     'visual-studio-code',
     'vlc',
     'xquartz',
-    'java'
+    'java',
+    'mysqlworkbench'
   ],
   gem: [
   ],

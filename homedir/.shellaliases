@@ -38,6 +38,7 @@ alias game.seek='txt="";for i in {1..20};do txt=$txt"$i. ";done;txt=$txt" Ready 
 # assumes git-up is installed (gem install git-up)
 # switches to 'develop' branch, updates all local branches (nicely using git-up), removes all local branches already merged into 'develop'
 alias gitdev='git checkout develop; git up; git branch --merged develop | grep -v "\* develop" | xargs -n 1 git branch -d; git branch;'
+alias gitmaster='git checkout master; git up; git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d; git branch;'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -100,3 +101,12 @@ alias td="todo.sh"
 alias tda="todo.sh add"
 alias tdl="todo.sh list"
 alias tdd="todo.sh do"
+
+# NPM running scripts
+alias npmrs="run.env npm run start"
+alias npmrt="run.env npm run test"
+alias npms="npm run start"
+alias npmt="npm run test"
+
+# Update all repos in Workspace
+alias upgit="gitup ~/Workspace"
