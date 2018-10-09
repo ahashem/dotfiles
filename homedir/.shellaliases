@@ -92,3 +92,24 @@ alias spoton="sudo mdutil -a -i on"
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
 
 alias vtop="vtop --theme wizard"
+
+# NPM running scripts
+alias npmrs="run.env npm run start"
+alias npmrt="run.env npm run test"
+alias npms="npm run start"
+alias npmt="npm run test"
+
+# Sequelize
+alias npxseqm="run.env npx sequelize db:migrate"
+alias npxseqmu="run.env npx sequelize db:migrate:undo"
+alias npxseqmua="run.env npx sequelize db:migrate:undo:all"
+alias npxseqms="run.env npx sequelize db:migrate:status"
+
+# Personalized GIT aliases
+# Update all repos in Workspace
+alias upgit="gitup ~/Workspace/Cognitev"
+alias gcdot="git checkout ."
+
+
+# Others
+alias sshcog="ssh -v root@jump.mcagrid.com -p 30022 -i ~/.ssh/cognitev"
