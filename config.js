@@ -4,7 +4,7 @@ module.exports = {
     'ack',
     'ag',
     // alternative to `cat`: https://github.com/sharkdp/bat
-    'bat', 
+    'bat',
     // Install GNU core utilities (those that come with macOS are outdated)
     // Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
     'coreutils',
@@ -65,10 +65,10 @@ module.exports = {
     'iterm2',
     'little-snitch',
     'macbreakz',
-    'micro-snitch',
+    // 'micro-snitch',
     'signal',
     //'macvim',
-    'sizeup',
+    // 'sizeup',
     //'sketchup',
     'slack',
     'spectacle',
@@ -79,7 +79,11 @@ module.exports = {
     'vlc',
     'xquartz',
     'java',
-    'mysqlworkbench'
+    'mysqlworkbench',
+    'jetbrains-toolbox',
+    'docker-toolbox',
+    'setapp',
+    'adobe-creative-cloud',
   ],
   gem: [
   ],
@@ -88,7 +92,7 @@ module.exports = {
     'buzzphrase',
     'eslint',
     'instant-markdown-d',
-    // 'generator-dockerize',
+    'generator-dockerize',
     // 'gulp',
     'npm-check-updates',
     'prettyjson',
@@ -97,6 +101,6 @@ module.exports = {
     'yarn',
     '@angular/cli',
     'firebase-cli',
-    // ,'yo'
+    'yo',
   ]
 };
