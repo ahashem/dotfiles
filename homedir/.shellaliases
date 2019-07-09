@@ -120,7 +120,8 @@ alias npxseqms="run.env npx sequelize db:migrate:status"
 
 # Personalized GIT aliases
 # Update all repos in Workspace
-alias upgit="gitup ~/Workspace/Zyda"
+alias upgitz="gitup ~/Workspace/Zyda"
+alias upgit="gitup ~/Workspace"
 alias gcdot="git checkout ."
 alias gcdev="git checkout dev"
 
@@ -130,4 +131,7 @@ alias sshcog="ssh -v root@jump.mcagrid.com -p 30022 -i ~/.ssh/cognitev"
 # Ruby - GEM - RVM - Bundle
 alias gemdelall="gem uninstall -aIx"
 alias rbenv-doctor="curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash"
+
+# Docker - K8s
+alias k8sgendashtoken="kubectl get secret -n kube-system | grep k8sadmin | cut -d \" \" -f1 | xargs -n 1 | xargs kubectl get secret  -o 'jsonpath={.data.token}' -n kube-system | base64 --decode | pbcopy"
 
