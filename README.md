@@ -60,7 +60,7 @@ When I finish with your machine, you will be able to look at your command-line i
 
 Check out how your shell prompt includes the full path, node.js version & the working git branch along with a lot of other info!
 We use powerlevel9k for command prompt, so customization of what you want is easily changable in `./.zshrc`
-The top terminal is using vim + NerdTree as a full Atom replacement IDE.
+The top terminal is using vim as a full replacement IDE.
 The bottom left two are git terminals.
 The bottom right is running `vtop`
 
@@ -76,9 +76,10 @@ To launch fullscreen, hit `Command + Enter` in iTerm, then use `Command + d` and
 
 > Note: I recommend forking this repo in case you don't like anything I do and want to set your own preferences (and pull request them!)
 
-> REVIEW WHAT THIS SCRIPT DOES PRIOR TO RUNNING: https://github.com/atomantic/dotfiles/blob/master/install.sh#L275-L1038
+> ☢️ REVIEW WHAT THIS SCRIPT DOES PRIOR TO RUNNING: https://github.com/atomantic/dotfiles/blob/master/install.sh#L275-L1038
 > It's always a good idea to review arbitrary code from the internet before running it on your machine with sudo power!
 > You are responsible for everything this script does to your machine (see LICENSE)
+> The creator of this repo has a high tolerance for nuking his machine and starting over. If you have a low tolerance for this, proceed with caution.
 
 ```bash
 git clone --recurse-submodules https://github.com/atomantic/dotfiles ~/.dotfiles
@@ -136,7 +137,7 @@ The following will only happen if you agree on the prompt
 - overwrite your /etc/hosts file with a copy from someonewhocares.org (see ./configs/hosts for the file that will be used)
 - replace the system wallpaper with `img/wallpaper.jpg`
 
-## SSD-specific tweaks  
+## SSD-specific tweaks
 - Disable local Time Machine snapshots
 - Disable hibernation (speeds up entering sleep mode)
 - Remove the sleep image file to save disk space
@@ -391,7 +392,7 @@ Please refer to the [Contributor Covenant](https://github.com/atomantic/dotfiles
 ⚡ Lightning Network Satoshi Tips Accepted https://tippin.me/@antic
 > With the advent of Bitcoin Lightning Network, you can tip me as little as 1 satoshi (.00000001 $BTC). 1000 satoshi is about $.04 as of this writing. Any amount is appreciated and playing with Lightning will help you learn about the future of the internet! :)
 
-Don't have Lightning? 
+Don't have Lightning?
 - [Blue Wallet (for iOS and Android)](https://bluewallet.io/)
 - [Eclair Wallet (for Android)](https://play.google.com/store/apps/details?id=fr.acinq.eclair.wallet.mainnet2)
 

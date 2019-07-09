@@ -102,6 +102,12 @@ alias tda="todo.sh add"
 alias tdl="todo.sh list"
 alias tdd="todo.sh do"
 
+alias k='kubectl'
+alias kp='kubectl get pods -o wide'
+alias kdp='kubectl describe pod'
+alias kdn='kubectl describe node'
+
+
 
 # NPM running scripts
 alias npmrs="run.env npm run start"

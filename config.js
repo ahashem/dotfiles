@@ -3,6 +3,8 @@ module.exports = {
     // http://conqueringthecommandline.com/book/ack_ag
     'ack',
     'ag',
+    // https://github.com/wting/autojump
+    'autojump',
     // alternative to `cat`: https://github.com/sharkdp/bat
     'bat',
     // Install GNU core utilities (those that come with macOS are outdated)
@@ -43,7 +45,7 @@ module.exports = {
     'tree',
     'ttyrec',
     // better, more recent vim
-    'vim --with-override-system-vi',
+    'vim --with-client-server --with-override-system-vi',
     'watch',
     // Install wget with IRI support
     'wget --enable-iri',
