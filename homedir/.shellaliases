@@ -112,11 +112,25 @@ alias kdn='kubectl describe node'
 # NPM running scripts
 alias npmrs="run.env npm run start"
 alias npmrsrv="run.env npm run serve"
-alias npmrt="run.env npm run test"
+alias npmrdev="run.env npm run dev"
+alias npmrtst="run.env npm run test"
 alias npms="npm run start"
 alias npmsrv="npm run serve"
-alias npmt="npm run test"
+alias npmdev="npm run dev"
+alias npmtst="npm run test"
 alias npmrnpx="run.env npx"
+alias npmrmi="rm -rf node_modules/ && npm i"
+
+# Yarn running scripts
+alias yrmi="rm -rf node_modules/ && rm -rf yarn.lock && yarn"
+alias yrs="run.env yarn start"
+alias yrsrv="run.env yarn serve"
+alias yrdev="run.env yarn dev"
+alias yrtst="run.env yarn test"
+alias ys="yarn start"
+alias ysrv="yarn serve"
+alias ydev="yarn dev"
+alias ytst="yarn  test"
 
 # Sequelize
 alias npxseqm="run.env npx sequelize db:migrate"
