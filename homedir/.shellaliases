@@ -146,7 +146,7 @@ alias gcdot="git checkout ."
 alias gcdev="git checkout dev"
 
 # Others
-alias sshcog="ssh -v root@jump.mcagrid.com -p 30022 -i ~/.ssh/cognitev"
+alias gcball="git branch -a | grep -v HEAD | perl -ne 'chomp($_); s|^\*?\s*||; if (m|(.+)/(.+)| && not $d{$2}) {print qq(git branch --track $2 $1/$2\n)} else {$d{$_}=1}' | csh -xfs| git fetch -a | git pull -as"
 
 # Ruby - GEM - RVM - Bundle
 alias gemdelall="gem uninstall -aIx"
