@@ -30,7 +30,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize compleat dirpersist autojump git gulp history cp brew)
+plugins=(colorize compleat dirpersist autojump git gulp history cp brew asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -49,14 +49,20 @@ load-nvmrc
 unsetopt correct
 
 # run fortune on new terminal :)
-# fortune
+fortune
 
 export PATH="$HOME/.yarn/bin:$PATH"
 #export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
+#
+# # asdf
+# . /usr/local/opt/asdf/asdf.sh
+# . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
-export PATH="$HOME/.yarn/bin:$PATH"
-#export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
-source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
+# Print Session Info
+#   echo 'using Node: ' $(node --version)
+#   echo 'using npm: ' $(npm --version)
+#   echo 'using k8s: ' $(k version)
+
