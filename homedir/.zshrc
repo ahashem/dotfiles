@@ -52,7 +52,6 @@ unsetopt correct
 fortune
 
 export PATH="$HOME/.yarn/bin:$PATH"
-#export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 #
@@ -60,6 +59,8 @@ source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 # . /usr/local/opt/asdf/asdf.sh
 # . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
+# make rbenv load automatically when open Terminal
+# eval "$(rbenv init -)"
 
 # Print Session Info
 #   echo 'using Node: ' $(node --version)
