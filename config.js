@@ -13,12 +13,12 @@ module.exports = {
     'dos2unix',
     // Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
     'findutils',
-    // 'fortune',
+    'fortune',
     'fzf',
     'readline', // ensure gawk gets good readline
     'gawk',
     // http://www.lcdf.org/gifsicle/ (because I'm a gif junky)
-    'gifsicle',
+    // 'gifsicle',
     'gnupg',
     // Install GNU `sed`, overwriting the built-in `sed`
     // so we can do "sed -i 's/foo/bar/' file" instead of "sed -i '' 's/foo/bar/' file"
@@ -26,7 +26,7 @@ module.exports = {
     // upgrade grep so we can get things like inverted match (-v)
     'grep --with-default-names',
     // better, more recent grep
-    'homebrew/dupes/grep',
+    'grep',
     // https://github.com/jkbrzt/httpie
     'httpie',
     // jq is a sort of JSON grep
@@ -35,13 +35,13 @@ module.exports = {
     'mas',
     // Install some other useful utilities like `sponge`
     'moreutils',
-    'nmap',
-    'openconnect',
+    // 'nmap',
+    // 'openconnect',
     'reattach-to-user-namespace',
     // better/more recent version of screen
-    'homebrew/dupes/screen',
+    'screen',
     'tmux',
-    'todo-txt',
+    // 'todo-txt',
     'tree',
     'ttyrec',
     // better, more recent vim
@@ -50,6 +50,8 @@ module.exports = {
     // Install wget with IRI support
     'wget --enable-iri',
     'gitup',
+    'rbenv',
+    'git-extras'
   ],
   cask: [
     //'adium',
@@ -66,15 +68,15 @@ module.exports = {
     //'ireadfast',
     'iterm2',
     // 'little-snitch',
-    'macbreakz',
+    // 'macbreakz',
     // 'micro-snitch',
-    'signal',
+    // 'signal',
     //'macvim',
     // 'sizeup',
     //'sketchup',
     'slack',
-    'spectacle',
-    'the-unarchiver',
+    // 'spectacle',
+    // 'the-unarchiver',
     //'torbrowser',
     //'transmission',
     'visual-studio-code',
@@ -83,7 +85,6 @@ module.exports = {
     // 'java',
     // 'mysqlworkbench',
     'jetbrains-toolbox',
-    'docker-toolbox',
     'setapp',
     // 'adobe-creative-cloud',
   ],
