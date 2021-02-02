@@ -30,7 +30,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize compleat dirpersist autojump git gulp history cp brew asdf)
+plugins=(colorize compleat dirpersist autojump git history cp brew asdf aws kubectl terraform)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,6 +54,7 @@ fortune
 export PATH="$HOME/.yarn/bin:$PATH"
 
 source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
+
 #
 # # asdf
 # . /usr/local/opt/asdf/asdf.sh
@@ -67,3 +68,10 @@ source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 #   echo 'using npm: ' $(npm --version)
 #   echo 'using k8s: ' $(k version)
 
+export GPG_TTY=/dev/ttys000
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+# export KUBECONFIG=$HOME/.kind/kind-config

@@ -192,6 +192,7 @@
 [push]
   default = matching
 	followTags = true
+	gpgSign = false
 
 [filter "media"]
   required = true
@@ -208,3 +209,9 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[pull]
+	rebase = false
+[commit]
+	gpgSign = true
+[gpg]
+	program = gpg2

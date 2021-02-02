@@ -21955,3 +21955,7 @@ ff02::3		ip6-allhosts
 # John Mueller and Lawrence H Smith for Mac Pre-OSX information
 # Jesse Baird for the Cisco IOS script
 Wed Mar 13 14:15:15 2019top
+# Added by Docker Desktop
+# To allow the same kube context to work on the host and the container:
+127.0.0.1 kubernetes.docker.internal
+# End of section
