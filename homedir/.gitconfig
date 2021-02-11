@@ -1,6 +1,7 @@
 [user]
   name = Ahmed Hashem
-  email = me@ahashem.me
+	email = ahmed.hashem@hey.car
+	signingkey = A53D88671439641C
 [github]
   # https://github.com/blog/180-local-github-config
   user = ahashem
