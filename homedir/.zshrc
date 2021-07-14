@@ -70,10 +70,16 @@ source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 #   echo 'using npm: ' $(npm --version)
 #   echo 'using k8s: ' $(k version)
 
-export GPG_TTY=/dev/ttys000
+# export GPG_TTY=/dev/ttys000
+export GPG_TTY=$(tty)
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 # export KUBECONFIG=$HOME/.kind/kind-config
+
+# awsudo
+export PATH="$(python3 -m site --user-base)/bin:${PATH}"
+# Chromium
+export PATH="$PATH:/Users/hashem/Workspace/playground/depot_tools"
