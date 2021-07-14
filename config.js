@@ -35,7 +35,6 @@ module.exports = {
     'mas',
     // Install some other useful utilities like `sponge`
     'moreutils',
-    // 'nmap',
     // 'openconnect',
     'reattach-to-user-namespace',
     // better/more recent version of screen
@@ -75,7 +74,6 @@ module.exports = {
     // 'sizeup',
     //'sketchup',
     'slack',
-    // 'spectacle',
     // 'the-unarchiver',
     //'torbrowser',
     //'transmission',
