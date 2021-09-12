@@ -30,7 +30,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize compleat dirpersist autojump git history cp brew asdf aws kubectl terraform helm)
+plugins=(colorize compleat dirpersist autojump git history cp brew asdf aws kubectl terraform helm golang jenv nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,3 +83,5 @@ export PATH=$PATH:$GOPATH/bin
 export PATH="$(python3 -m site --user-base)/bin:${PATH}"
 # Chromium
 export PATH="$PATH:/Users/hashem/Workspace/playground/depot_tools"
+# custom scripts
+export PATH="$HOME/scripts:$PATH"
