@@ -126,34 +126,6 @@ if [[ $? = 0 ]]; then
 fi
 
 # ###########################################################
-# Wallpaper
-# ###########################################################
-MD5_NEWWP=$(md5 img/wallpaper.jpg | awk '{print $4}')
-MD5_OLDWP=$(md5 /System/Library/CoreServices/DefaultDesktop.jpg | awk '{print $4}')
-if [[ "$MD5_NEWWP" != "$MD5_OLDWP" ]]; then
-  read -r -p "Do you want to use the project's custom desktop wallpaper? [y|N] " response
-  if [[ $response =~ (yes|y|Y) ]]; then
-    running "Set a custom wallpaper image"
-    # rm -rf ~/Library/Application Support/Dock/desktoppicture.db
-    bot "I will backup system wallpapers in ~/.dotfiles/img/"
-    sudo cp /System/Library/CoreServices/DefaultDesktop.jpg img/DefaultDesktop.jpg > /dev/null 2>&1
-    sudo cp /Library/Desktop\ Pictures/El\ Capitan.jpg img/El\ Capitan.jpg > /dev/null 2>&1
-    sudo cp /Library/Desktop\ Pictures/Sierra.jpg img/Sierra.jpg > /dev/null 2>&1
-    sudo cp /Library/Desktop\ Pictures/Sierra\ 2.jpg img/Sierra\ 2.jpg > /dev/null 2>&1
-    sudo rm -f /System/Library/CoreServices/DefaultDesktop.jpg > /dev/null 2>&1
-    sudo rm -f /Library/Desktop\ Pictures/El\ Capitan.jpg > /dev/null 2>&1
-    sudo rm -f /Library/Desktop\ Pictures/Sierra.jpg > /dev/null 2>&1
-    sudo rm -f /Library/Desktop\ Pictures/Sierra\ 2.jpg > /dev/null 2>&1
-    sudo cp ./img/wallpaper.jpg /System/Library/CoreServices/DefaultDesktop.jpg;
-    sudo cp ./img/wallpaper.jpg /Library/Desktop\ Pictures/Sierra.jpg;
-    sudo cp ./img/wallpaper.jpg /Library/Desktop\ Pictures/Sierra\ 2.jpg;
-    sudo cp ./img/wallpaper.jpg /Library/Desktop\ Pictures/El\ Capitan.jpg;ok
-  else
-    ok "skipped"
-  fi
-fi
-
-# ###########################################################
 # Install non-brew various tools (PRE-BREW Installs)
 # ###########################################################
 
@@ -302,6 +274,28 @@ fi
 #   sudo chown -R $(whoami) /Library/Ruby/Gems/2.0.0
 #   ok
 # fi
+
+
+###############################################################################
+# Golang                                                                      #
+###############################################################################
+if [ -z "$(which go)" ]; then
+  echo "Golang not available. Skipping!"
+else
+  bot "Install Golang packages"
+  go get -u github.com/ramya-rao-a/go-outline
+  go get -u github.com/nsf/gocode
+  go get -u github.com/uudashr/gopkgs/cmd/gopkgs
+  go get -u github.com/acroca/go-symbols
+  go get -u golang.org/x/tools/cmd/guru
+  go get -u golang.org/x/tools/cmd/gorename
+  go get -u github.com/rogpeppe/godef
+  go get -u sourcegraph.com/sqs/goreturns
+  go get -u github.com/golang/lint/golint
+  go get -u github.com/kardianos/govendor
+  go get -u go.coder.com/sshcode
+  ok
+fi
 
 # node version manager
 require_brew nvm
@@ -530,13 +524,13 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # running "Wipe all (default) app icons from the Dock"
 # # This is only really useful when setting up a new Mac, or if you don’t use
 # # the Dock to launch apps.
-# defaults write com.apple.dock persistent-apps -array "";ok
+defaults write com.apple.dock persistent-apps -array "";ok
 
 #running "Enable the 2D Dock"
 #defaults write com.apple.dock no-glass -bool true;ok
 
 #running "Disable the Launchpad gesture (pinch with thumb and three fingers)"
-#defaults write com.apple.dock showLaunchpadGestureEnabled -int 0;ok
+defaults write com.apple.dock showLaunchpadGestureEnabled -int 0;ok
 
 #running "Add a spacer to the left side of the Dock (where the applications are)"
 #defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}';ok
@@ -547,8 +541,8 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 ################################################
 bot "Standard System Changes"
 ################################################
-running "always boot in verbose mode (not MacOS GUI mode)"
-sudo nvram boot-args="-v";ok
+#running "always boot in verbose mode (not MacOS GUI mode)"
+#sudo nvram boot-args="-v";ok
 
 running "allow 'locate' command"
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist > /dev/null 2>&1;ok
@@ -1173,15 +1167,15 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false;ok
 
 ###############################################################################
-bot "SizeUp.app"
-###############################################################################
-
-running "Start SizeUp at login"
-defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true;ok
-
-running "Don’t show the preferences window on next start"
-defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false;ok
-
+#bot "SizeUp.app"
+################################################################################
+#
+#running "Start SizeUp at login"
+#defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true;ok
+#
+#running "Don’t show the preferences window on next start"
+#defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false;ok
+#
 killall cfprefsd
 
 open /Applications/iTerm.app
@@ -1196,6 +1190,6 @@ for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
   killall "${app}" > /dev/null 2>&1
 done
 
-brew update && brew upgrade && brew cleanup 
+brew update && brew upgrade && brew cleanup
 
 bot "Woot! All done"

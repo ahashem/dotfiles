@@ -30,7 +30,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize compleat dirpersist autojump git gulp history cp)
+plugins=(colorize compleat dirpersist autojump git history cp brew asdf aws kubectl terraform helm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -51,4 +51,29 @@ load-nvmrc
 unsetopt correct
 
 # run fortune on new terminal :)
-# fortune
+fortune
+
+export PATH="$HOME/.yarn/bin:$PATH"
+
+source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
+
+#
+# # asdf
+# . /usr/local/opt/asdf/asdf.sh
+# . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+
+# make rbenv load automatically when open Terminal
+# eval "$(rbenv init -)"
+
+# Print Session Info
+#   echo 'using Node: ' $(node --version)
+#   echo 'using npm: ' $(npm --version)
+#   echo 'using k8s: ' $(k version)
+
+export GPG_TTY=/dev/ttys000
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+# export KUBECONFIG=$HOME/.kind/kind-config

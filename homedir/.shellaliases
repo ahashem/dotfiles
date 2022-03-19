@@ -19,6 +19,7 @@ alias dos2lf='dos2unix `find ./ -type f`'
 
 # Flush the DNS on Mac
 alias dnsflush='dscacheutil -flushcache'
+alias dnskillall='sudo killall -HUP mDNSResponder'
 
 # Empty the Trash on all mounted volumes and the main HDD.
 # Also, clear Apple’s System Logs to improve shell startup speed.
@@ -36,8 +37,9 @@ alias game.seek='txt="";for i in {1..20};do txt=$txt"$i. ";done;txt=$txt" Ready 
 
 # Git Tools
 # assumes git-up is installed (gem install git-up)
-# switches to 'develop' branch, updates all local branches (nicely using git-up), removes all local branches already merged into 'develop'
-alias gitdev='git checkout develop; git-up; git branch --merged develop | grep -v "\* develop" | xargs -n 1 git branch -d; git branch;'
+# switches to 'dev' branch, updates all local branches (nicely using git-up), removes all local branches already merged into 'dev'
+#alias gitdev='git checkout dev; git up; git branch --merged dev | grep -v "\* dev" | xargs -n 1 git branch -d; git branch;'
+#alias gitmaster='git checkout master; git up; git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d; git branch;'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -75,7 +77,7 @@ alias port-forward-disable="sudo pfctl -F all -f /etc/pf.conf"
 alias port-forward-list="sudo pfctl -s nat"
 
 # push git repo, but first, use git-up to make sure you are in sync and rebased with the remote
-alias pushup="git-up && git push"
+#alias pushup="git up && git push"
 # Set the extended MacOS attributes on a file such that Quicklook will open it as text
 alias qltext='xattr -wx com.apple.FinderInfo "54 45 58 54 21 52 63 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" $1'
 #alias qltext2='osascript -e tell application "Finder" to set file type of ((POSIX file "$1") as alias) to "TEXT"'
@@ -89,7 +91,7 @@ alias spotoff="sudo mdutil -a -i off"
 alias spoton="sudo mdutil -a -i on"
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; mas upgrade'
 
 alias vtop="vtop --theme wizard"
 
@@ -105,3 +107,55 @@ alias k='kubectl'
 alias kp='kubectl get pods -o wide'
 alias kdp='kubectl describe pod'
 alias kdn='kubectl describe node'
+
+
+
+# NPM running scripts
+alias npmrs="run.env npm run start"
+alias npmrsrv="run.env npm run serve"
+alias npmrdev="run.env npm run dev"
+alias npmrtst="run.env npm run test"
+alias npms="npm run start"
+alias npmsrv="npm run serve"
+alias npmdev="npm run dev"
+alias npmtst="npm run test"
+alias npmrnpx="run.env npx"
+alias npmrmi="rm -rf node_modules/ && npm i"
+
+# Yarn running scripts
+alias yrmi="rm -rf node_modules/ && rm -rf yarn.lock && yarn"
+alias yrs="run.env yarn start"
+alias yrsrv="run.env yarn serve"
+alias yrdev="run.env yarn dev"
+alias yrtst="run.env yarn test"
+alias ys="yarn start"
+alias ysrv="yarn serve"
+alias ydev="yarn dev"
+alias ytst="yarn  test"
+
+# Sequelize
+alias npxseqm="run.env npx sequelize db:migrate"
+alias npxseqmu="run.env npx sequelize db:migrate:undo"
+alias npxseqmua="run.env npx sequelize db:migrate:undo:all"
+alias npxseqms="run.env npx sequelize db:migrate:status"
+
+# Personalized GIT aliases
+# Update all repos in Workspace
+alias upgit="gitup ~/Workspace"
+alias gcdot="git checkout ."
+alias gcdev="git checkout dev"
+alias gpda-remote-not-master='git branch -a | command grep -vE "master" | grep "origin/" | cut -d "/" -f 3- | xargs -n 20 git push --delete origin'
+
+# Others
+alias gcball="git branch -a | grep -v HEAD | perl -ne 'chomp($_); s|^\*?\s*||; if (m|(.+)/(.+)| && not $d{$2}) {print qq(git branch --track $2 $1/$2\n)} else {$d{$_}=1}' | csh -xfs| git fetch -a | git pull -as"
+
+# Ruby - GEM - RVM - Bundle
+alias gemdelall="gem uninstall -aIx"
+alias rbenv-doctor="curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash"
+
+# Docker - K8s
+alias k8sgendashtoken="kubectl get secret -n kube-system | grep k8sadmin | cut -d \" \" -f1 | xargs -n 1 | xargs kubectl get secret  -o 'jsonpath={.data.token}' -n kube-system | base64 --decode | pbcopy"
+alias kinfo="kubectl version --short && kubectl get componentstatus && kubectl get nodes && kubectl cluster-info"
+alias kgall="kubectl get deployments,pods,services"
+
+
