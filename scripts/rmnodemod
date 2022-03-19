@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#find and clear all Node Modules Folders Recursively
+echo "finding and removing node_modules ..." && \
+find $1 -name "node_modules" -type d -prune -ok rm -rf '{}' +;
