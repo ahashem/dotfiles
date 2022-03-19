@@ -5,8 +5,11 @@ module.exports = {
     'ag',
     // https://github.com/wting/autojump
     'autojump',
+    'awscli',
+    'aws-iam-authenticator',
     // alternative to `cat`: https://github.com/sharkdp/bat
     'bat',
+    'circleci',
     // Install GNU core utilities (those that come with macOS are outdated)
     // Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
     'coreutils',
@@ -19,6 +22,8 @@ module.exports = {
     'gawk',
     // http://www.lcdf.org/gifsicle/ (because I'm a gif junky)
     // 'gifsicle',
+    'gitup',
+    'git-extras',
     'gnupg',
     // Install GNU `sed`, overwriting the built-in `sed`
     // so we can do "sed -i 's/foo/bar/' file" instead of "sed -i '' 's/foo/bar/' file"
@@ -28,9 +33,14 @@ module.exports = {
     // better, more recent grep
     'grep',
     // https://github.com/jkbrzt/httpie
+    'helm',
     'httpie',
     // jq is a sort of JSON grep
     'jq',
+    'jenv',
+    'kubectl',
+    'kubectx',
+    'nvm',
     // Mac App Store CLI: https://github.com/mas-cli/mas
     'mas',
     // Install some other useful utilities like `sponge`
@@ -50,7 +60,6 @@ module.exports = {
     'wget --enable-iri',
     'gitup',
     'rbenv',
-    'git-extras'
   ],
   cask: [
     //'adium',
@@ -62,10 +71,10 @@ module.exports = {
     'docker', // docker for mac
     //'dropbox',
     // 'evernote',
-    'flux',
+    //'flux',
     'gpg-suite',
     //'ireadfast',
-    'iterm2',
+    // 'iterm2',
     // 'little-snitch',
     // 'macbreakz',
     // 'micro-snitch',
@@ -78,7 +87,7 @@ module.exports = {
     //'torbrowser',
     //'transmission',
     'visual-studio-code',
-    'vlc',
+    // 'vlc',
     'xquartz',
     // 'java',
     // 'mysqlworkbench',
@@ -103,7 +112,7 @@ module.exports = {
   ],
   mas: [
     //com.apple.dt.Xcode (10.2.1)
-    '497799835',
+    // '497799835',
     //com.if.Amphetamine (4.1.6)
     //'937984704',
     //net.shinyfrog.bear (1.6.15)
