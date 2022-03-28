@@ -1,7 +1,7 @@
 [user]
-  name = Ahmed Hashem
-	email = ahmed.hashem@hey.car
-	signingkey = A53D88671439641C
+  name = Ahmed Abdelrahman
+	email = ahashem.pm@gmail.com
+	signingkey = F94EE79CF573298A
 [github]
   # https://github.com/blog/180-local-github-config
   user = ahashem
@@ -38,7 +38,7 @@
   fontdiff = -family Monaco -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 
 [core]
-	excludesfile = /Users/ahashem/.gitignore
+	excludesfile = /Users/hashem/.gitignore
   quotepath = false
   # line endings
   # force LF during add

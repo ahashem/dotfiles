@@ -63,6 +63,7 @@ module.exports = {
     'podman-desktop'
   ],
   cask: [
+    '1password',
     //'adium',
     //'amazon-cloud-drive',
     //'atom',
@@ -75,10 +76,11 @@ module.exports = {
     //'flux',
     'gpg-suite',
     //'ireadfast',
-    // 'iterm2',
+    'lastpass',
     // 'little-snitch',
     // 'macbreakz',
     // 'micro-snitch',
+    'postman',
     // 'signal',
     //'macvim',
     // 'sizeup',
