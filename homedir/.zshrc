@@ -58,11 +58,11 @@ load-nvmrc
 unsetopt correct
 
 # run fortune on new terminal :)
-fortune
+# fortune
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
-source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
+# source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 
 #
 # # asdf

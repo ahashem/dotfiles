@@ -21,3 +21,5 @@ homedir/.vim/bundle/*
 
 #IDE
 .idea
+
+tmp
