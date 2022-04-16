@@ -201,8 +201,8 @@ if [[ "$CURRENTSHELL" != "/bin/zsh" ]]; then
   ok
 fi
 
-if [[ ! -d "./oh-my-zsh/custom/themes/powerlevel9k" ]]; then
-  git clone https://github.com/bhilburn/powerlevel9k.git oh-my-zsh/custom/themes/powerlevel9k
+if [[ ! -d "./oh-my-zsh/custom/themes/powerlevel10k" ]]; then
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git oh-my-zsh/custom/themes/powerlevel10k
 fi
 
 bot "Dotfiles Setup"
@@ -263,6 +263,8 @@ if [[ $response =~ (y|yes|Y) ]];then
   require_cask font-roboto-mono
   require_cask font-roboto-mono-for-powerline
   require_cask font-source-code-pro
+
+  p10k configure
   ok
 fi
 
@@ -281,17 +283,17 @@ if [ -z "$(which go)" ]; then
   echo "Golang not available. Skipping!"
 else
   bot "Install Golang packages"
-  go get -u github.com/ramya-rao-a/go-outline
-  go get -u github.com/nsf/gocode
-  go get -u github.com/uudashr/gopkgs/cmd/gopkgs
-  go get -u github.com/acroca/go-symbols
-  go get -u golang.org/x/tools/cmd/guru
-  go get -u golang.org/x/tools/cmd/gorename
-  go get -u github.com/rogpeppe/godef
-  go get -u sourcegraph.com/sqs/goreturns
-  go get -u github.com/golang/lint/golint
-  go get -u github.com/kardianos/govendor
-  go get -u go.coder.com/sshcode
+  go install -u github.com/ramya-rao-a/go-outline
+  go install -u github.com/nsf/gocode
+  go install -u github.com/uudashr/gopkgs/cmd/gopkgs
+  go install -u github.com/acroca/go-symbols
+  go install -u golang.org/x/tools/cmd/guru
+  go install -u golang.org/x/tools/cmd/gorename
+  go install -u github.com/rogpeppe/godef
+  go install -u sourcegraph.com/sqs/goreturns
+  go install -u github.com/golang/lint/golint
+  go install -u github.com/kardianos/govendor
+  go install -u go.coder.com/sshcode
   ok
 fi
 
@@ -997,7 +999,7 @@ sudo mdutil -i on / > /dev/null;ok
 #sudo mdutil -E / > /dev/null;ok
 
 ###############################################################################
-bot "Terminal & iTerm2"
+bot "Terminal"
 ###############################################################################
 
 # running "Only use UTF-8 in Terminal.app"
