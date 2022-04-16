@@ -215,3 +215,5 @@
 	program = gpg2
 [pull]
 	rebase = true
+[url "https://github"]
+	insteadOf = git://github
