@@ -159,3 +159,6 @@ alias kinfo="kubectl version --short && kubectl get componentstatus && kubectl g
 alias kgall="kubectl get deployments,pods,services"
 
 
+# DEBUG #
+alias dbgbabel="DEBUG='babel:config:loading:files:configuration'"
+alias dbgnode="node --inspect"

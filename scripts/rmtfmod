@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#find and clear all Terraform Modules Folders Recursively
+echo "finding and removing .terraform ..." && \
+find $1 -name ".terraform" -type d -prune -ok rm -rf '{}' +;

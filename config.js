@@ -60,6 +60,7 @@ module.exports = {
     'wget --enable-iri',
     'gitup',
     'rbenv',
+    'podman-desktop'
   ],
   cask: [
     //'adium',
