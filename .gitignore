@@ -21,3 +21,8 @@ homedir/.vim/bundle/*
 
 #IDE
 .idea
+
+# others
+tmp
+.dev.env
+.docker
