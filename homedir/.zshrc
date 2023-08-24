@@ -30,16 +30,17 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize z nvm compleat dirpersist autojump git history cp brew asdf aws kubectl terraform helm)
+plugins=(colorize compleat dirpersist autojump git history cp brew asdf z node npm aws kubectl terraform helm osx)
 
+# must be after plugins or at end of file
 source $ZSH/oh-my-zsh.sh
-
-autoload -U add-zsh-hook
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# place this after nvm initialization!
+autoload -U add-zsh-hook
 
 load-nvmrc() {
   if [[ -f .nvmrc && -r .nvmrc ]]; then
@@ -55,11 +56,11 @@ load-nvmrc
 unsetopt correct
 
 # run fortune on new terminal :)
-fortune
+# fortune
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
-source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
+source /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh
 
 #
 # # asdf
