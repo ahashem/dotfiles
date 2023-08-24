@@ -9,6 +9,7 @@ img/*.backup.jpg
 node_modules
 # personal swap gitconfigs
 homedir/.gitconfig_*
+.gitconfig
 homedir/.vim/backup/*
 !homedir/.vim/backup/.gitignore
 homedir/.vim/temp/*
