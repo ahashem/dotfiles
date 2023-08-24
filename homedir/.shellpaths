@@ -1,6 +1,7 @@
 #My Scripts
-export PATH=$PATH:.
+#export PATH=$PATH:.
 export PATH=$PATH:~/.dotfiles/scripts
+export PATH="$HOME/bin:$PATH" #test for toolbox
 
 #Brew
 export PATH=/usr/local/sbin:$PATH

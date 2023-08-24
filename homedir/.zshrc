@@ -11,16 +11,16 @@ export ZSH=$HOME/.dotfiles/oh-my-zsh
 # POWERLEVEL10K_MODE='awesome-patched'
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 # export ZSH_THEME="agnoster"
-POWERLEVEL10K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 # https://github.com/bhilburn/powerlevel10k#customizing-prompt-segments
 # https://github.com/bhilburn/powerlevel10k/wiki/Stylizing-Your-Prompt
-POWERLEVEL10K_LEFT_PROMPT_ELEMENTS=(dir nvm vcs)
-POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=(status history time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir nvm vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
 # colorcode test
 # for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
-POWERLEVEL10K_NVM_FOREGROUND='000'
-POWERLEVEL10K_NVM_BACKGROUND='072'
-POWERLEVEL10K_SHOW_CHANGESET=true
+POWERLEVEL9K_NVM_FOREGROUND='000'
+POWERLEVEL9K_NVM_BACKGROUND='072'
+POWERLEVEL9K_SHOW_CHANGESET=true
 POWERLEVEL9K_INSTANT_PROMPT=quiet
 #export ZSH_THEME="random"
 
@@ -38,11 +38,9 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize zsh-z compleat dirpersist autojump git history cp brew asdf aws kubectl terraform helm)
+plugins=(colorize zsh-z nvm compleat dirpersist autojump git history cp brew asdf aws kubectl terraform helm)
 
 source $ZSH/oh-my-zsh.sh
-
-source /usr/local/opt/nvm/nvm.sh --no-use
 
 autoload -U add-zsh-hook
 load-nvmrc() {
