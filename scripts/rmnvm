@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#find and clear all Node Modules Folders Recursively
+echo "finding and removing all nvm versions but latest ..." && \
+ls -A ~/.nvm/versions/node | grep -v `nvm current` | xargs echo

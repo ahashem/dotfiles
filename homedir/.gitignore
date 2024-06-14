@@ -40,6 +40,13 @@ Session.vim
 *~
 
 #########
+# IDE #
+#########
+.idea
+.vscode
+
+
+#########
 # Maven #
 #########
 target/

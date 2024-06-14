@@ -28,16 +28,14 @@ export CASE_SENSITIVE="true"
 # disable autosetting terminal title.
 export DISABLE_AUTO_TITLE="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize compleat dirpersist autojump git history cp brew asdf z node npm aws kubectl terraform helm osx)
+plugins=(colorize compleat dirpersist autojump git history cp brew asdf z node npm yarn docker aws kubectl terraform osx laravel)
 
 # must be after plugins or at end of file
 source $ZSH/oh-my-zsh.sh
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # place this after nvm initialization!
 autoload -U add-zsh-hook
@@ -55,12 +53,9 @@ load-nvmrc
 # Customize to your needs...
 unsetopt correct
 
-# run fortune on new terminal :)
-# fortune
-
 export PATH="$HOME/.yarn/bin:$PATH"
 
-source /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh
+source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 
 #
 # # asdf
@@ -76,9 +71,31 @@ source /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh
 #   echo 'using k8s: ' $(k version)
 
 export GPG_TTY=/dev/ttys000
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
 
-export GOPATH=$HOME/go
+# JAVA Tooling
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
+
+# Go Tooling
+export GOPATH=/usr/local/go/bin/go
 export PATH=$PATH:$GOPATH/bin
 # export KUBECONFIG=$HOME/.kind/kind-config
+
+# Python Tooling
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# PHP Tooling
+# PHP 8.2 => brew link php@8.2 --force --overwrite
+export PATH="/usr/local/opt/php@8.2/bin:$PATH"
+export PATH="/usr/local/opt/php@8.2/sbin:$PATH"
+
+# Homebrew's "sbin"
+export Homebrew_PREFIX=$(brew --prefix)
+export PATH="/usr/local/sbin:$PATH"
+source "$Homebrew_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
